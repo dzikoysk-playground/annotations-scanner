@@ -21,25 +21,22 @@ AnnotationsScannerProcess process = scanner.createWorker()
 Now, you can finally select annotated classes
 
 ```java
-Set<Class<?>> classes = process.createSelector()
-        .selectTypesAnnotatedWith(AnnotationTest.class);
+Set<Class<?>> classes = process.createSelector().selectTypesAnnotatedWith(AnnotationTest.class);
 ```
 
 You can also select subtypes of classes, AnnotationsScannerProcess contains prepared inheritance map
 
 ```java
-Set<Class<?>> classes = process.createSelector()
-        .selectSubtypesOf(Object.class);
+Set<Class<?>> classes = process.createSelector().selectSubtypesOf(Object.class);
 ```
 
 You also should be able to create custom selector, like:
 
 ```java
-Set<Class<?>> classes = process.createSelector()
-        .select(new AnnotationsSelector() {
-            @Override
-            public Collection<String> select(AnnotationsScannerProcess process, AnnotationScannerStore store) {
-                return null;
-            }
-        })
+Set<Class<?>> classes = process.createSelector().select(new AnnotationsSelector() {
+    @Override
+    public Collection<String> select(AnnotationsScannerProcess process, AnnotationScannerStore store) {
+        return null;
+    }
+})
 ```
