@@ -1,4 +1,4 @@
-# Annotations Scanner
+# Annotations Scanner ![Annotations CI](https://github.com/dzikoysk/annotations/workflows/Annotations%20CI/badge.svg) [![Build Status](https://travis-ci.com/dzikoysk/annotations.svg?branch=master)](https://travis-ci.com/dzikoysk/annotations)
 The lightweight and actively developed alternative to [reflections](https://github.com/ronmamo/reflections). 
 Source code is partly based on the reflections library to avoid repeating the same mistakes.
 
